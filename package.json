@@ -4,6 +4,7 @@
   "description": "",
   "main": ".eslintrc.json",
   "scripts": {
+    "lint": "eslint .",
     "test": "mocha "
   },
   "repository": {
@@ -15,7 +16,9 @@
     "eslint",
     "eslint-config",
     "config",
+    "styleguide",
     "frontend",
+    "javascript",
     "es5",
     "es6",
     "nanodegree"
