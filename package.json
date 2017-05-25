@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config-udacity",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.json",
+  "scripts": {
+    "test": "mocha "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linesh-simplicity/eslint-config-udacity.git"
+  },
+  "keywords": [
+    "udacity",
+    "eslint",
+    "eslint-config",
+    "config",
+    "frontend",
+    "es5",
+    "es6",
+    "nanodegree"
+  ],
+  "author": "Linesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linesh-simplicity/eslint-config-udacity/issues"
+  },
+  "homepage": "https://github.com/linesh-simplicity/eslint-config-udacity#readme"
+}
