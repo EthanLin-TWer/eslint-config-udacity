@@ -25,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/linesh-simplicity/eslint-config-udacity/issues"
   },
-  "homepage": "https://github.com/linesh-simplicity/eslint-config-udacity#readme"
+  "homepage": "https://github.com/linesh-simplicity/eslint-config-udacity#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "mocha": "^3.4.2"
+  }
 }
