@@ -2,7 +2,7 @@
   "name": "eslint-config-udacity",
   "version": "0.0.4",
   "description": "",
-  "main": ".eslintrc.json",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "test": "mocha --compilers js:babel-register",
