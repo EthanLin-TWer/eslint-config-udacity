@@ -6,10 +6,12 @@
   "scripts": {
     "lint": "eslint .",
     "test": "mocha --compilers js:babel-register",
-    "bump:patch": "npm version patch -m '[npm-version-patch] 🔖Version: upgrade to %s and published to npm'",
-    "bump:minor": "npm version patch -m '[npm-version-minor] 🔖Version: upgrade to %s and published to npm'",
-    "bump:major": "npm version patch -m '[npm-version-major] 🔖Version: upgrade to %s and published to npm'",
-    "publish:patch": "npm run bump:patch && npm publish"
+    "bump:patch": "npm version patch -m '[$(git config user.name)] 🔖Version: patch upgrade to %s and published to npm'",
+    "bump:minor": "npm version minor -m '[$(git config user.name)] 🔖Version: minor upgrade to %s and published to npm'",
+    "bump:major": "npm version major -m '[$(git config user.name)] 🔖Version: major upgrade to %s and published to npm'",
+    "publish:patch": "npm run bump:patch && npm publish",
+    "publish:minor": "npm run bump:minor && npm publish",
+    "publish:major": "npm run bump:major && npm publish"
   },
   "repository": {
     "type": "git",
