@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "mocha --compilers js:babel-register",
-    "prepublish": "npm version patch"
+    "prepublish": "npm version patch -m \"[npm-version] 🔖Version: upgrade to %s and published to npm.\""
   },
   "repository": {
     "type": "git",
