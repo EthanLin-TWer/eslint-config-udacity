@@ -5,7 +5,8 @@
   "main": ".eslintrc.json",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha --compilers js:babel-register"
+    "test": "mocha --compilers js:babel-register",
+    "prepublish": "npm version patch"
   },
   "repository": {
     "type": "git",
