@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-udacity",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": ".eslintrc.json",
   "scripts": {
@@ -37,5 +37,8 @@
     "eslint": "^3.19.0",
     "eslint-plugin-import": "^2.3.0",
     "mocha": "^3.4.2"
+  },
+  "peerDependencies": {
+    "eslint": ">= 3"
   }
 }
