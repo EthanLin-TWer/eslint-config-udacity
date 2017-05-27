@@ -26,6 +26,6 @@ module.exports = {
     'object-property-newline': 'error',
     'array-bracket-spacing': 'error',
     quotes: ['error', 'single'],
-    'no-undef': 'error',
+    'no-undef': 'warn',
   },
 };
