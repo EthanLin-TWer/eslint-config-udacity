@@ -65,7 +65,7 @@ Some of the rules can't be covered by this eslint rule. Specifically, they're th
 
 ## License
 
-MIT。
+MIT
 
 [Udacity Frontend Nanodegree Style Guide]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
 [Nodejs.org]: https://nodejs.org/en/
