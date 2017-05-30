@@ -15,13 +15,13 @@
 
 安装以下依赖：
 
-```js
+```bash
 npm install --save-dev eslint eslint-config-udacity eslint-plugin-import
 ```
 
 或
 
-```js
+```bash
 yarn add --dev eslint eslint-config-udacity eslint-plugin-import
 ```
 
