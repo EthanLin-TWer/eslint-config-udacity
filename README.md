@@ -51,6 +51,17 @@ yarn add --dev eslint eslint-config-udacity eslint-plugin-import
 
 运行 `npm run lint` 命令即可。
 
+## 其他事项
+
+> ⚠ 这份配置仍不是100%自动化、完善的。
+
+目前，有一些规则还没有办法覆盖到，它们是以下4个规则，其中1个是必须的检查，3个是建议事项，并且也有些是代码逻辑上的问题（比如 DOM 操作与闭包），样式检查工具无法触及，仍然需要人工 review。
+
+* [【必须】函数名字必须以 camelCase 开头][camel-case-naming]
+* [【建议】避免 DOM 与闭包相连生成循环引用][nested-dom-closure]
+* [【建议】鼓励代码注释][code-comments]
+* [【建议】不鼓励使用 for ... in array 来循环数组][for-in-loop]
+
 ## License
 
 MIT。
@@ -58,3 +69,8 @@ MIT。
 [Udacity Frontend Nanodegree Style Guide]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
 [Nodejs.org]: https://nodejs.org/en/
 [nvm]: https://github.com/creationix/nvm
+
+[camel-case-naming]: https://github.com/udacity/frontend-nanodegree-styleguide-zh/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D%E6%A0%B7%E5%BC%8F%E6%8C%87%E5%8D%97%20-%20JavaScript.md#%E5%91%BD%E5%90%8D
+[nested-dom-closure]: https://github.com/udacity/frontend-nanodegree-styleguide-zh/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D%E6%A0%B7%E5%BC%8F%E6%8C%87%E5%8D%97%20-%20JavaScript.md#%E9%97%AD%E5%8C%85
+[code-comments]: https://github.com/udacity/frontend-nanodegree-styleguide-zh/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D%E6%A0%B7%E5%BC%8F%E6%8C%87%E5%8D%97%20-%20JavaScript.md#%E6%B3%A8%E9%87%8A
+[for-in-loop]: https://github.com/udacity/frontend-nanodegree-styleguide-zh/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D%E6%A0%B7%E5%BC%8F%E6%8C%87%E5%8D%97%20-%20JavaScript.md#for-for-in-%E5%92%8C-foreach
