@@ -71,7 +71,7 @@ MIT
 [Nodejs.org]: https://nodejs.org/en/
 [nvm]: https://github.com/creationix/nvm
 
-[camel-case-naming]:
-[nested-dom-closure]:
-[code-comments]:
-[for-in-loop]:
+[camel-case-naming]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#naming
+[nested-dom-closure]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#closures
+[code-comments]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#comments
+[for-in-loop]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
