@@ -1,5 +1,9 @@
 # Udacity Frontend Nanodegree Style Guide - JavaScript
 
+> READMEs in other languages:
+>
+> * [中文版](./README-zh.md)
+
 This config checks for [Udacity Frontend Nanodegree Style Guide][] automatically. You can utilise this eslint config to check your projects before submit, or help check if a project meets [Udacity Frontend Nanodegree Style Guide][] as a reviewer.
 
 ## Get started
