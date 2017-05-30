@@ -4,7 +4,7 @@
 
 ## 如何使用
 
-![readme-instructors](http://www.giphy.com/gifs/3og0IDQlTk2DDb55v2)
+![readme-instructors](https://media.giphy.com/media/3og0IDQlTk2DDb55v2/giphy.gif)
 
 ### 软件需求
 
