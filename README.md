@@ -4,6 +4,8 @@
 
 ## 如何使用
 
+![readme-instructors](http://www.giphy.com/gifs/3og0IDQlTk2DDb55v2)
+
 ### 软件需求
 
 * 确保你有一个全局的 Node/NPM 或 yarn。如果没有，你可以在 [官网][Nodejs.org] 下载安装，或通过 [nvm][] 安装管理 node；若 NPM 已经安装，可使用 `npm i -g yarn` 安装 yarn
