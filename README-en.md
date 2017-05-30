@@ -4,7 +4,7 @@ This config checks for [Udacity Frontend Nanodegree Style Guide][] automatically
 
 ## Get started
 
-![readme-instructors](./readme-instructor.gif)
+![readme-instructors](./readme-instructors.gif)
 
 ### prerequisite
 
