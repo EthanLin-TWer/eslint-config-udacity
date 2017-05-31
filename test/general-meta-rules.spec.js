@@ -37,7 +37,7 @@ describe('General Meta Rules', () => {
   })
 
   describe('comments', () => {
-    it('should use comments whenever possible', () => {
+    it.skip('should use comments whenever possible', () => {
 
     })
   })
