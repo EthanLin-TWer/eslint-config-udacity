@@ -136,16 +136,30 @@ describe('JavaScript Language Rules', () => {
   })
 
   describe('wrapper objects for primitive types', () => {
-    it('should not use wrapper Boolean object for primitive boolean types', () => {
+    let engine
 
+    beforeEach(() => {
+      engine = new CLIEngine({
+        useEslintrc: false,
+        rules: {
+          'no-new-wrappers': 'error',
+        },
+      })
+    })
+
+    it('should not use wrapper Boolean object for primitive boolean types', () => {
+      const result = engine.executeOnText('var x = new Boolean(false);')
+      assert.equal(result.errorCount, 1)
     })
 
     it('should not use wrapper String object for primitive string types', () => {
-
+      const result = engine.executeOnText('var x = new String(\'string\');')
+      assert.equal(result.errorCount, 1)
     })
 
     it('should not use wrapper Number object for primitive number types', () => {
-
+      const result = engine.executeOnText('var x = new Number(0);')
+      assert.equal(result.errorCount, 1)
     })
   })
 
