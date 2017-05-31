@@ -2,6 +2,7 @@ import { CLIEngine } from 'eslint'
 import { describe, it, beforeEach } from 'mocha'
 import assert from 'assert'
 
+// TODO: [Linesh][5/31/17] refactor tests with eslint rule tester: https://github.com/RichardIvan/eslint-plugin-constant-check/blob/master/tests/src/rules/suggest-constant.spec.js
 describe('JavaScript Language Rules', () => {
   describe('vars', () => {
     let engine
