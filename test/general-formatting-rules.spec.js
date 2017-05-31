@@ -26,13 +26,13 @@ describe('General Formatting Rules', () => {
     })
   })
 
-  describe('indentation', () => {
+  describe.skip('indentation', () => {
     it('should have consistent indentation', () => {
 
     })
   })
 
-  describe('action items', () => {
+  describe.skip('action items', () => {
     it('should mark todos and actions items with TODO', () => {
 
     })
