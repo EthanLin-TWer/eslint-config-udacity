@@ -39,6 +39,14 @@ describe('JavaScript Style Rules', () => {
       assert.equal(result.errorCount, 0)
     })
 
+    it.skip('class names should not start with lower cases like: class animal {}', () => {
+      const lowercaseClassName = engine.executeOnText('class animal {}')
+      assert.equal(lowercaseClassName.errorCount, 1)
+
+      const firstWordLowercaseClassName = engine.executeOnText('class shibaInu {}')
+      assert.equal(firstWordLowercaseClassName.errorCount, 1)
+    })
+
     it('method names should be like this: capitaliseAllLetterExceptTheFirst', () => {
 
     })
