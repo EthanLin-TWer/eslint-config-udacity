@@ -87,14 +87,24 @@ describe('JavaScript Language Rules', () => {
     })
 
     it('should use semicolons on variable evaluations', () => {
+      const valueEvaluation = engine.executeOnText('var sum = 1 + 2;')
+      assert.equal(valueEvaluation.errorCount, 0)
 
+      const functionAssignment = engine.executeOnText(`
+        var add = function(a, b) { return a + b; };
+      `)
+      assert.equal(functionAssignment.errorCount, 0)
+
+      const functionCallEvaluation = engine.executeOnText(`
+        var add = function(a, b) {
+          return a + b;        
+        };
+        var sum = add(1, 2);
+      `)
+      assert.equal(functionCallEvaluation.errorCount, 0)
     })
 
     it('should use semicolons on simple statements', () => {
-
-    })
-
-    it('should use semicolons on function declaration and variable assignment', () => {
 
     })
 
