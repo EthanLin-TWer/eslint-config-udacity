@@ -225,8 +225,24 @@ describe('JavaScript Language Rules', () => {
   })
 
   describe('multiline string literals', () => {
-    it('should use string concatenation for multiline string literals', () => {
+    let engine
 
+    beforeEach(() => {
+      engine = new CLIEngine({
+        useEslintrc: false,
+        rules: {
+          'no-multi-str': 'error',
+        },
+      })
+    })
+
+    it('should use string concatenation for multiline string literals', () => {
+      const result = engine.executeOnText(`
+        var poems = 'Truth may seem but cannot be;' + 
+              'Beauty brag but ’tis not she;' + 
+              'Truth and beauty buried be.';
+      `)
+      assert.equal(result.errorCount, 0)
     })
 
     it('should report error when having whitespaces at the beginning of each line of a multiline string literal', () => {
