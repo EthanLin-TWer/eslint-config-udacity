@@ -1,4 +1,4 @@
-# Udacity Frontend Nanodegree Style Guide - JavaScript
+# Udacity Frontend Nanodegree Style Guide - JavaScript [![][Badges: Travis CI]][Links: Travis CI]
 
 > READMEs in other languages:
 >
@@ -79,3 +79,6 @@ MIT
 [nested-dom-closure]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#closures
 [code-comments]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#comments
 [for-in-loop]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
+
+[Badges: Travis CI]: https://travis-ci.org/linesh-simplicity/eslint-config-udacity.svg?branch=master
+[Links: Travis CI]: https://travis-ci.org/linesh-simplicity/eslint-config-udacity

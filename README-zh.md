@@ -1,4 +1,4 @@
-# Udacity 前端工程师纳米学位样式指南 - JavaScript
+# Udacity 前端工程师纳米学位样式指南 - JavaScript [![][Badges: Travis CI]][Links: Travis CI]
 
 本仓库可以自动化执行 [Udacity Frontend Nanodegree Style Guide][] 要求的样式检查。无论你是需要提交纳米学位项目，或是帮忙 review 项目，你都可以使用这个仓库来做样式方面的自动化检查。
 
@@ -74,3 +74,6 @@ MIT。
 [nested-dom-closure]: https://github.com/udacity/frontend-nanodegree-styleguide-zh/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D%E6%A0%B7%E5%BC%8F%E6%8C%87%E5%8D%97%20-%20JavaScript.md#%E9%97%AD%E5%8C%85
 [code-comments]: https://github.com/udacity/frontend-nanodegree-styleguide-zh/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D%E6%A0%B7%E5%BC%8F%E6%8C%87%E5%8D%97%20-%20JavaScript.md#%E6%B3%A8%E9%87%8A
 [for-in-loop]: https://github.com/udacity/frontend-nanodegree-styleguide-zh/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D%E6%A0%B7%E5%BC%8F%E6%8C%87%E5%8D%97%20-%20JavaScript.md#for-for-in-%E5%92%8C-foreach
+
+[Badges: Travis CI]: https://travis-ci.org/linesh-simplicity/eslint-config-udacity.svg?branch=master
+[Links: Travis CI]: https://travis-ci.org/linesh-simplicity/eslint-config-udacity
