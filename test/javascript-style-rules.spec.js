@@ -9,11 +9,13 @@ describe('JavaScript Style Rules', () => {
     beforeEach(() => {
       engine = new CLIEngine({
         useEslintrc: false,
-        rules: {},
+        rules: {
+          camelcase: 'error',
+        },
       })
     })
 
-    it('function names should be like this: capitaliseAllLettersExceptTheFirst()', () => {
+    it.skip('function names should be like this: capitaliseAllLettersExceptTheFirst()', () => {
       const result = engine.executeOnText('')
       assert.equal(result.errorCount, 0)
     })
