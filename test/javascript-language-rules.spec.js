@@ -119,7 +119,19 @@ describe('JavaScript Language Rules', () => {
     })
 
     it('should not use semicolons on end of condition blocks(if, if-else, etc)', () => {
+      const noSemicolonsOnBlockEnds = engine.executeOnText(`
+        if (isManager()) {
+          salary += 200;
+        }
+      `)
+      assert.equal(noSemicolonsOnBlockEnds.errorCount, 0)
 
+      const semicolonsOnBlockEnds = engine.executeOnText(`
+        if (isManager()) {
+          salary += 200;
+        };
+      `)
+      assert.equal(semicolonsOnBlockEnds.errorCount, 1)
     })
   })
 
