@@ -67,6 +67,13 @@ Some of the rules can't be covered by this eslint rule. Specifically, they're th
 * [\[suggestion\] Code comments are encouraged][code-comments]
 * [\[suggestion\] Use for...in array loop is not recommended][for-in-loop]
 
+## Contribution
+
+1. fork the repo and submit your changes on a new branch
+2. make sure you add tests if you are adding new rules/features, or at least provide reasons for not doing so
+3. make sure the [build][Links: Travis CI] are all green before you submit a PR
+4. raise a PR
+
 ## License
 
 MIT

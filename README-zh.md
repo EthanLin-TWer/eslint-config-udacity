@@ -62,6 +62,13 @@ yarn add --dev eslint eslint-config-udacity eslint-plugin-import
 * [【建议】鼓励代码注释][code-comments]
 * [【建议】不鼓励使用 for ... in array 来循环数组][for-in-loop]
 
+## 如何贡献
+
+1. fork 仓库，并在新的分支上提交代码
+2. 如果你添加了新的规则/特性，请确保你为这部分代码也添加了测试覆盖；或者，你需要提供没有测试覆盖的理由
+3. 提交 PR 前，请确保你的 [构建][Links: Travis CI] 是全绿通过的
+4. 提交 PR
+
 ## License
 
 MIT。
