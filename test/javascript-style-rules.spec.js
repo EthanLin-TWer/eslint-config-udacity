@@ -21,8 +21,16 @@ describe('JavaScript Style Rules', () => {
     })
 
     it('variable names should be like this: capitaliseAllLettersExceptTheFirst', () => {
-      const result = engine.executeOnText('')
-      assert.equal(result.errorCount, 0)
+      const camelCase = engine.executeOnText('var legalName = "legal";')
+      assert.equal(camelCase.errorCount, 0)
+
+      const underscoreStyle = engine.executeOnText('var not_legal = "illegal";')
+      assert.equal(underscoreStyle.errorCount, 1)
+    })
+
+    it.skip('variable names should not start with capitalised letters like: var ThisIsIllegal', () => {
+      const notCamelCase = engine.executeOnText('var IllegalName = "illegal";')
+      assert.equal(notCamelCase.errorCount, 1)
     })
 
     it('class names should be like this: AllLettersCapitalised', () => {
