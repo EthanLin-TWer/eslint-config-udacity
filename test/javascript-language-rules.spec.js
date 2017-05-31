@@ -9,18 +9,20 @@ describe('JavaScript Language Rules', () => {
     beforeEach(() => {
       engine = new CLIEngine({
         useEslintrc: false,
-        rules: {},
+        rules: {
+          'no-undef': 'error',
+        },
       })
     })
 
     it('should always declare variables with var', () => {
-      const result = engine.executeOnText('')
+      const result = engine.executeOnText('var b = 20;')
       assert.equal(result.errorCount, 0)
     })
 
     it('should report error when declare variables without using keyword var', () => {
-      const result = engine.executeOnText('')
-      assert.equal(result.errorCount, 0)
+      const result = engine.executeOnText('b = 20;')
+      assert.equal(result.errorCount, 1)
     })
 
     it('should be fine to assign value to variable after declaration', () => {
