@@ -19,4 +19,16 @@ describe('Tips and Tricks', () => {
   it('should number 0 be false in boolean expressions', () => {
     assert.equal(inBooleanExpression(0), false)
   })
+
+  it('should string \'0\' be true in boolean expressions', () => {
+    assert(inBooleanExpression('0'))
+  })
+
+  it('should an empty array [] be true in boolean expressions', () => {
+    assert(inBooleanExpression([]))
+  })
+
+  it('should en empty object {} be true in boolean expressions', () => {
+    assert(inBooleanExpression({}))
+  })
 })
