@@ -136,7 +136,7 @@ describe('JavaScript Style Rules', () => {
   })
 
   describe('parentheses', () => {
-    it('only where required = = (nick young questions)', () => {
+    it.skip('only where required = = (nick young questions)', () => {
 
     })
   })
