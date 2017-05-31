@@ -35,15 +35,32 @@ describe('JavaScript Language Rules', () => {
   })
 
   describe('constants', () => {
-    it('should capital all letters if a variable is intended to be immutable', () => {
+    let engine
 
+    beforeEach(() => {
+      engine = new CLIEngine({
+        useEslintrc: false,
+        rules: {
+          camelcase: 'error',
+        },
+        parser: 'babel-eslint',
+        plugins: [
+          'eslint-plugin-constant-check',
+        ],
+      })
     })
 
-    it('should report error when a immutable variable is not named with all letters capitalised', () => {
-
+    it.skip('should capital all letters if a variable is intended to be immutable', () => {
+      const result = engine.executeOnText('var JASMINE_TIMEOUT_INTERVAL = 20000')
+      assert.equal(result.errorCount, 0)
     })
 
-    it('should never use the const keyword as it\'s not supported by all browsers at this time', () => {
+    it.skip('should report error when a immutable variable is not named with all letters capitalised', () => {
+      const result = engine.executeOnText('var shouldBeCapitalised = 222')
+      assert.equal(result.errorCount, 0)
+    })
+
+    it.skip('should never use the const keyword as it\'s not supported by all browsers at this time', () => {
 
     })
   })
