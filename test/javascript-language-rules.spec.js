@@ -109,8 +109,13 @@ describe('JavaScript Language Rules', () => {
       assert.equal(result.errorCount, 0)
     })
 
-    it('should not use semicolons on function execution only', () => {
-
+    it('should not use semicolons on function declaration only', () => {
+      const result = engine.executeOnText(`
+        function foo() {
+          return true;        
+        }
+      `)
+      assert.equal(result.errorCount, 0)
     })
 
     it('should not use semicolons on end of condition blocks(if, if-else, etc)', () => {
