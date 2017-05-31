@@ -79,8 +79,11 @@ describe('JavaScript Language Rules', () => {
     })
 
     it('should use semicolons on variable assignments', () => {
-      const result = engine.executeOnText('var b = 300;')
-      assert.equal(result.errorCount, 0)
+      const withSemicolon = engine.executeOnText('var b = 300;')
+      assert.equal(withSemicolon.errorCount, 0)
+
+      const withoutSemicolon = engine.executeOnText('var b = 300')
+      assert.equal(withoutSemicolon.errorCount, 1)
     })
 
     it('should use semicolons on variable evaluations', () => {
