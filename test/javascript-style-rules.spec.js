@@ -48,7 +48,11 @@ describe('JavaScript Style Rules', () => {
     })
 
     it('constant names should be like this: ALL_LETTERS_CAPITALISED', () => {
+      const withConst = engine.executeOnText('const EXECUTORS = 6')
+      assert.equal(withConst.errorCount, 0)
 
+      const withVars = engine.executeOnText('var EXECUTORS = 6')
+      assert.equal(withVars.errorCount, 0)
     })
 
     it('file names should be like this: alllettersdecapitalised.js', () => {
