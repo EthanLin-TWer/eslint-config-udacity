@@ -9,6 +9,7 @@ describe('JavaScript Style Rules', () => {
     beforeEach(() => {
       engine = new CLIEngine({
         useEslintrc: false,
+        parser: 'babel-eslint',
         rules: {
           camelcase: 'error',
         },
@@ -34,7 +35,8 @@ describe('JavaScript Style Rules', () => {
     })
 
     it('class names should be like this: AllLettersCapitalised', () => {
-
+      const uppercaseClassName = engine.executeOnText('class Animal {}')
+      assert.equal(uppercaseClassName.errorCount, 0)
     })
 
     it('method names should be like this: capitaliseAllLetterExceptTheFirst', () => {
