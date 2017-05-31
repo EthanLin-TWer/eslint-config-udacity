@@ -69,7 +69,6 @@ describe('JavaScript Style Rules', () => {
         rules: {
           'brace-style': 'error',
           'object-curly-spacing': 'error',
-          // 'object-property-newline': 'error',
           'array-bracket-spacing': 'error',
         },
       })
