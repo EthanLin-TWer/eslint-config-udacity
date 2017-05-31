@@ -55,7 +55,7 @@ describe('JavaScript Style Rules', () => {
       assert.equal(withVars.errorCount, 0)
     })
 
-    it('file names should be like this: alllettersdecapitalised.js', () => {
+    it.skip('file names should be like this: alllettersdecapitalised.js', () => {
 
     })
   })
