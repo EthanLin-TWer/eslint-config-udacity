@@ -69,6 +69,10 @@ yarn add --dev eslint eslint-config-udacity eslint-plugin-import
 3. 提交 PR 前，请确保你的 [构建][Links: Travis CI] 是全绿通过的
 4. 提交 PR
 
+## TODOLIST
+
+请见 [TODOLIST.md](./TODOLIST.md)。
+
 ## License
 
 MIT。

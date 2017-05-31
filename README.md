@@ -74,6 +74,10 @@ Some of the rules can't be covered by this eslint rule. Specifically, they're th
 3. make sure the [build][Links: Travis CI] are all green before you submit a PR
 4. raise a PR
 
+## TODOLIST
+
+See [TODOLIST.md](./TODOLIST.md).
+
 ## License
 
 MIT
