@@ -1,4 +1,5 @@
 import { CLIEngine } from 'eslint'
+import iconv from 'iconv-lite'
 import { describe, it, beforeEach } from 'mocha'
 import assert from 'assert'
 
@@ -9,12 +10,15 @@ describe('General Meta Rules', () => {
     beforeEach(() => {
       engine = new CLIEngine({
         useEslintrc: false,
-        rules: {},
+        rules: {
+          'unicode-bom': ['error', 'never'],
+        },
       })
     })
 
     it('should use UTF-8 with no BOM', () => {
-      const result = engine.executeOnText('')
+      const utf8WithNoBOM = iconv.encode('var foobar = 2;', 'utf-8')
+      const result = engine.executeOnText(utf8WithNoBOM)
       assert.equal(result.errorCount, 0)
     })
 

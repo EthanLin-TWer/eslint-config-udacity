@@ -45,6 +45,7 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
+    "iconv-lite": "^0.4.17",
     "mocha": "^3.4.2",
     "power-assert": "^1.4.2"
   },
