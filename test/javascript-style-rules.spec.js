@@ -142,12 +142,25 @@ describe('JavaScript Style Rules', () => {
   })
 
   describe('strings', () => {
-    it('should always use single-quotes(\') for JavaScript related syntax for consistency', () => {
+    let engine
 
+    beforeEach(() => {
+      engine = new CLIEngine({
+        useEslintrc: false,
+        rules: {
+          quotes: ['error', 'single'],
+        },
+      })
+    })
+
+    it('should always use single-quotes(\') for JavaScript related syntax for consistency', () => {
+      const result = engine.executeOnText('var string = \'single quoted\'')
+      assert.equal(result.errorCount, 0)
     })
 
     it('should report error when use double quote(") for JavaScript related changes', () => {
-
+      const result = engine.executeOnText('var string = "double quoted"')
+      assert.equal(result.errorCount, 1)
     })
   })
 })
