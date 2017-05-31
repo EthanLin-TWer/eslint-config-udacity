@@ -61,8 +61,35 @@ describe('JavaScript Style Rules', () => {
   })
 
   describe('code formatting', () => {
-    it('should always start your curly braces on the same line', () => {
+    let engine
 
+    beforeEach(() => {
+      engine = new CLIEngine({
+        useEslintrc: false,
+        rules: {
+          'brace-style': 'error',
+          'object-curly-spacing': 'error',
+          'object-property-newline': 'error',
+          'array-bracket-spacing': 'error',
+        },
+      })
+    })
+
+    it('should always start your curly braces on the same line', () => {
+      const curlyBracesOnTheSameLine = engine.executeOnText(`
+        if (isManager()) {
+          addSalary();
+        }
+      `)
+      assert.equal(curlyBracesOnTheSameLine.errorCount, 0)
+
+      const curlyBracesOnNextLine = engine.executeOnText(`
+        if (isManager())
+        {
+          addSalary();
+        }
+      `)
+      assert.equal(curlyBracesOnNextLine.errorCount, 1)
     })
 
     it('single-line array initializers are allowed when they fit on one line', () => {
