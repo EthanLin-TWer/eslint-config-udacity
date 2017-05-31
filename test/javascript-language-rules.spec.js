@@ -257,8 +257,21 @@ describe('JavaScript Language Rules', () => {
   })
 
   describe('array and object literals', () => {
-    it('should use array literals', () => {
+    let engine
 
+    beforeEach(() => {
+      engine = new CLIEngine({
+        useEslintrc: false,
+        rules: {
+          'no-array-constructor': 'error',
+          'no-new-object': 'error',
+        },
+      })
+    })
+
+    it('should use array literals', () => {
+      const result = engine.executeOnText('var array = [1, 2, 3];')
+      assert.equal(result.errorCount, 0)
     })
 
     it('should use object literals', () => {
@@ -266,7 +279,8 @@ describe('JavaScript Language Rules', () => {
     })
 
     it('should not use array constructors', () => {
-
+      const result = engine.executeOnText('var array = new Array(1, 2, 3);')
+      assert.equal(result.errorCount, 1)
     })
 
     it('should not use object constructors', () => {
