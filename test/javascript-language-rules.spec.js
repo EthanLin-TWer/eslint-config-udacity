@@ -275,7 +275,8 @@ describe('JavaScript Language Rules', () => {
     })
 
     it('should use object literals', () => {
-
+      const result = engine.executeOnText('var object = { a: 2 };')
+      assert.equal(result.errorCount, 0)
     })
 
     it('should not use array constructors', () => {
@@ -284,7 +285,11 @@ describe('JavaScript Language Rules', () => {
     })
 
     it('should not use object constructors', () => {
-
+      const result = engine.executeOnText(`
+        var object = new Object();
+        object.a = 2;
+      `)
+      assert.equal(result.errorCount, 1)
     })
   })
 })
