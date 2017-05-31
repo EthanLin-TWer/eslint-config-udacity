@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-udacity",
   "version": "1.2.1",
-  "description": "",
+  "description": "Help you automate Udacity Frontend Nanodegree Style Guide styling check at ease!",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -23,6 +23,8 @@
     "eslint-config",
     "config",
     "styleguide",
+    "automate",
+    "styling-check",
     "frontend",
     "javascript",
     "es5",
