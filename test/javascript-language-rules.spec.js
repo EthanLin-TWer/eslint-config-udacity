@@ -246,7 +246,13 @@ describe('JavaScript Language Rules', () => {
     })
 
     it('should report error when having whitespaces at the beginning of each line of a multiline string literal', () => {
-
+      /* eslint no-useless-escape: "off" */
+      const result = engine.executeOnText(`
+        var poems = 'Truth may seem but cannot be; \ 
+              Beauty brag but ’tis not she; \
+              Truth and beauty buried be.';
+      `)
+      assert.equal(result.errorCount, 1)
     })
   })
 
