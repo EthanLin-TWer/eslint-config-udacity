@@ -47,10 +47,6 @@ describe('JavaScript Style Rules', () => {
       assert.equal(firstWordLowercaseClassName.errorCount, 1)
     })
 
-    it('method names should be like this: capitaliseAllLetterExceptTheFirst', () => {
-
-    })
-
     it('constant names should be like this: ALL_LETTERS_CAPITALISED', () => {
 
     })
