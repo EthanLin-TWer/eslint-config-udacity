@@ -69,7 +69,7 @@ describe('JavaScript Style Rules', () => {
         rules: {
           'brace-style': 'error',
           'object-curly-spacing': 'error',
-          'object-property-newline': 'error',
+          // 'object-property-newline': 'error',
           'array-bracket-spacing': 'error',
         },
       })
@@ -103,7 +103,8 @@ describe('JavaScript Style Rules', () => {
     })
 
     it('single-line object initializers are allowed when they fit on one line', () => {
-
+      const result = engine.executeOnText('var object = {a: 1, b: 2};')
+      assert.equal(result.errorCount, 0)
     })
 
     it('single-line object initializers should have no spaces after the opening bracket or before the closing bracket', () => {
