@@ -113,11 +113,26 @@ describe('JavaScript Style Rules', () => {
     })
 
     it('multiline array initializers are indented one level, with braces on their own lines, just like blocks', () => {
-
+      const result = engine.executeOnText(`
+        var array = [
+          'Joe <joe@email.com>',
+          'Sal <sal@email.com>',
+          'Murr <murr@email.com>',
+          'Q <q@email.com>'
+        ];
+      `)
+      assert.equal(result.errorCount, 0)
     })
 
     it('multiline object initializers are indented one level, with braces on their own lines, just like blocks', () => {
-
+      const result = engine.executeOnText(`
+        var object = {
+          id: 'foo',
+          class: 'foo-important',
+          name: 'notification'
+        };
+      `)
+      assert.equal(result.errorCount, 0)
     })
   })
 
