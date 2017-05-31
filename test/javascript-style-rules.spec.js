@@ -108,7 +108,8 @@ describe('JavaScript Style Rules', () => {
     })
 
     it('single-line object initializers should have no spaces after the opening bracket or before the closing bracket', () => {
-
+      const result = engine.executeOnText('var object = { a: 1, b: 2 };')
+      assert.equal(result.errorCount, 2)
     })
 
     it('multiline array initializers are indented one level, with braces on their own lines, just like blocks', () => {
