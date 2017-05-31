@@ -26,6 +26,11 @@ describe('JavaScript Language Rules', () => {
     })
 
     it('should be fine to assign value to variable after declaration', () => {
+      const result = engine.executeOnText(`
+        var b;
+        b = 20;
+      `)
+      assert.equal(result.errorCount, 0)
     })
   })
 
