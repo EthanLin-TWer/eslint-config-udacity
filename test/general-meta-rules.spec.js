@@ -11,7 +11,7 @@ describe('General Meta Rules', () => {
       engine = new CLIEngine({
         useEslintrc: false,
         rules: {
-          'unicode-bom': ['error', 'always'],
+          'unicode-bom': ['error', 'never'],
         },
       })
     })
