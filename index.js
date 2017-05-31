@@ -28,4 +28,4 @@ module.exports = {
     quotes: ['error', 'single'],
     'no-undef': 'warn',
   },
-};
+}
