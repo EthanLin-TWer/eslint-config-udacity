@@ -164,25 +164,25 @@ describe('JavaScript Language Rules', () => {
   })
 
   describe('closures', () => {
-    it('not recommended to attach a closure to a DOM element that can create a circular reference', () => {
+    it.skip('not recommended to attach a closure to a DOM element that can create a circular reference', () => {
 
     })
   })
 
   describe('for, for-in and forEach', () => {
-    it('forEach loops are preferred over for-in loops when iterating over an array', () => {
+    it.skip('forEach loops are preferred over for-in loops when iterating over an array', () => {
 
     })
 
-    it('for loops are preferred over for-in loops when iterating over an array', () => {
+    it.skip('for loops are preferred over for-in loops when iterating over an array', () => {
 
     })
 
-    it('not recommended to use for-in to iterate over an array', () => {
+    it.skip('not recommended to use for-in to iterate over an array', () => {
 
     })
 
-    it('not recommended to use for-in to iterate over an object cause the prototype chain will also be visited', () => {
+    it.skip('not recommended to use for-in to iterate over an object cause the prototype chain will also be visited', () => {
 
     })
 
