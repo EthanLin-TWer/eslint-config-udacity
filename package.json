@@ -37,6 +37,7 @@
   "homepage": "https://github.com/linesh-simplicity/eslint-config-udacity#readme",
   "devDependencies": {
     "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
     "babel-plugin-espower": "^2.3.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-power-assert": "^1.0.0",
@@ -44,6 +45,7 @@
     "babel-register": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-constant-check": "^0.0.265",
     "eslint-plugin-import": "^2.3.0",
     "iconv-lite": "^0.4.17",
     "mocha": "^3.4.2",
