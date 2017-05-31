@@ -170,6 +170,16 @@ describe('JavaScript Language Rules', () => {
   })
 
   describe('for, for-in and forEach', () => {
+    let engine
+
+    beforeEach(() => {
+      engine = new CLIEngine({
+        useEslintrc: false,
+        rules: {
+          'guard-for-in': 'error',
+        },
+      })
+    })
     it.skip('forEach loops are preferred over for-in loops when iterating over an array', () => {
 
     })
@@ -183,11 +193,34 @@ describe('JavaScript Language Rules', () => {
     })
 
     it.skip('not recommended to use for-in to iterate over an object cause the prototype chain will also be visited', () => {
-
+      const result = engine.executeOnText(`
+        var obj = {
+          one: 1,
+          two: 2,
+          three: 3
+        };
+        var sum = 0;
+        for (key in obj) {
+          sum += obj[key];
+        }
+      `)
+      assert.equal(result.errorCount, 1)
     })
 
     it('should wrap the content of the for-in loop on an object in a conditional statement to prevent iterating over the prototype chain', () => {
-
+      const result = engine.executeOnText(`
+        var obj = {
+          one: 1,
+          two: 2
+        };
+        var sum = 0;
+        for (key in obj) {
+          if (Object.prorotype.hasOwnProperty.call(obj, key)) {
+            sum += obj[key];
+          }
+        }
+      `)
+      assert.equal(result.errorCount, 0)
     })
   })
 
