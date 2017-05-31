@@ -93,11 +93,13 @@ describe('JavaScript Style Rules', () => {
     })
 
     it('single-line array initializers are allowed when they fit on one line', () => {
-
+      const result = engine.executeOnText('var array = [1, 2, 3];')
+      assert.equal(result.errorCount, 0)
     })
 
     it('single-line array initializers should have no spaces after the opening bracket or before the closing bracket', () => {
-
+      const result = engine.executeOnText('var array = [ 1, 2, 3 ];')
+      assert.equal(result.errorCount, 2)
     })
 
     it('single-line object initializers are allowed when they fit on one line', () => {
