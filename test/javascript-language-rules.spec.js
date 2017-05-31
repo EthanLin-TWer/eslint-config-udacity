@@ -74,6 +74,7 @@ describe('JavaScript Language Rules', () => {
         useEslintrc: false,
         rules: {
           semi: 'error',
+          'no-extra-semi': 'error',
         },
       })
     })
@@ -86,26 +87,26 @@ describe('JavaScript Language Rules', () => {
       assert.equal(withoutSemicolon.errorCount, 1)
     })
 
-    it('should use semicolons on variable evaluations', () => {
-      const valueEvaluation = engine.executeOnText('var sum = 1 + 2;')
-      assert.equal(valueEvaluation.errorCount, 0)
-
-      const functionAssignment = engine.executeOnText(`
+    it('should use semicolons on function assignments', () => {
+      const result = engine.executeOnText(`
         var add = function(a, b) { return a + b; };
       `)
-      assert.equal(functionAssignment.errorCount, 0)
+      assert.equal(result.errorCount, 0)
+    })
 
-      const functionCallEvaluation = engine.executeOnText(`
+    it('should use semicolons on simple statements', () => {
+      const result = engine.executeOnText('var sum = 1 + 2;')
+      assert.equal(result.errorCount, 0)
+    })
+
+    it('should use semicolons on function call evaluation and value assignment', () => {
+      const result = engine.executeOnText(`
         var add = function(a, b) {
           return a + b;        
         };
         var sum = add(1, 2);
       `)
-      assert.equal(functionCallEvaluation.errorCount, 0)
-    })
-
-    it('should use semicolons on simple statements', () => {
-
+      assert.equal(result.errorCount, 0)
     })
 
     it('should not use semicolons on function execution only', () => {
