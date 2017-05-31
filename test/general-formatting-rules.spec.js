@@ -9,18 +9,20 @@ describe('General Formatting Rules', () => {
     beforeEach(() => {
       engine = new CLIEngine({
         useEslintrc: false,
-        rules: {},
+        rules: {
+          'no-trailing-spaces': 'error',
+        },
       })
     })
 
     it('should remove trailing white spaces', () => {
-      const result = engine.executeOnText('')
+      const result = engine.executeOnText('var no = "spaces";')
       assert.equal(result.errorCount, 0)
     })
 
     it('should report error with trailing white spaces', () => {
-      const result = engine.executeOnText('')
-      assert.equal(result.errorCount, 0)
+      const result = engine.executeOnText('var spaces = "no allowed";  ')
+      assert.equal(result.errorCount, 1)
     })
   })
 
