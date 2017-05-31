@@ -66,8 +66,20 @@ describe('JavaScript Language Rules', () => {
   })
 
   describe('semicolons', () => {
-    it('should use semicolons on variable assignments', () => {
+    let engine
 
+    beforeEach(() => {
+      engine = new CLIEngine({
+        useEslintrc: false,
+        rules: {
+          semi: 'error',
+        },
+      })
+    })
+
+    it('should use semicolons on variable assignments', () => {
+      const result = engine.executeOnText('var b = 300;')
+      assert.equal(result.errorCount, 0)
     })
 
     it('should use semicolons on variable evaluations', () => {
