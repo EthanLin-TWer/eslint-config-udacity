@@ -10,7 +10,7 @@ module.exports = {
   ],
   rules: {
     'no-trailing-spaces': 'error',
-    indent: ['warn', 2],
+    indent: ['warn', 3],
     'unicode-bom': ['error', 'never'],
     'no-warning-comments': 'warn',
     semi: 'error',
